@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELTEI INTERNATIONAL SCHOOL - School Management System</title>
+    <style>
+        /* CSS Reset & General Rules */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            /* Simulated background image using gradient overlays to match reference image color tint */
+            background: linear-gradient(rgba(100, 140, 200, 0.45), rgba(40, 40, 50, 0.65)),
+                        url("https://beltei.edu.kh/asset/img/school/campus/school-B31.jpg") no-repeat center center / cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 10px;
+        }
+
+        /* Top Header Title */
+        .top-header {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .top-header h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-style: italic;
+            color: #41d683;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8);
+            letter-spacing: 0.5px;
+        }
+
+        /* Center Login Box Overlay */
+        .login-box {
+            background-color: rgba(30, 36, 45, 0.82);
+            width: 100%;
+            max-width: 420px;
+            padding: 30px 25px 20px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            margin: auto 0;
+        }
+
+        /* Vector Logo Wrapper */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .logo-circle {
+            width: 85px;
+            height: 85px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* School Name Heading */
+        .school-title {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 22px;
+        }
+
+        /* Form Controls */
+        .form-group {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .form-control {
+            width: 100%;
+            height: 38px;
+            padding: 8px 36px 8px 12px;
+            font-size: 0.85rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .form-control:focus {
+            border-color: #4a90e2;
+        }
+
+        /* Input Right Icon Styling */
+        .input-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            fill: #555555;
+            pointer-events: none;
+        }
+
+        /* Remember Me Option */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 12px 0 16px 0;
+            color: #e0e0e0;
+            font-size: 0.8rem;
+            text-align: left;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            cursor: pointer;
+            accent-color: #3b5998;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            width: 100%;
+            height: 40px;
+            background-color: #3b5998;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #2d4373;
+        }
+
+        /* Forgot Password Link */
+        .forgot-link {
+            margin-top: 14px;
+        }
+
+        .forgot-link a {
+            color: #d0d0d0;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        .forgot-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Links inside Login Card */
+        .card-links {
+            margin-top: 25px;
+            font-size: 0.75rem;
+            color: #32ca74;
+        }
+
+        .card-links a {
+            color: #32ca74;
+            text-decoration: none;
+            margin: 0 4px;
+        }
+
+        .card-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bottom Footer */
+        .page-footer p {
+            color: #ffffff;
+            font-size: 0.75rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Heading -->
+    <header class="top-header">
+        <h1>School Management System</h1>
+    </header>
+
+    <!-- Main Login Card Container -->
+    <main class="login-box">
+        
+        <!-- BELTEI SVG Badge Logo -->
+        <div class="logo-container">
+            <div class="logo-circle">
+                <display aria-setsize="10%"                
+                    </svg>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h2 class="school-title">BELTEI INTERNATIONAL SCHOOL</h2>
+
+        <!-- Form Elements -->
+        <form action="#" method="POST">
+            
+            <!-- Academic Year Selection -->
+            <div class="form-group">
+                <select class="form-control" name="academic_year" required>
+                    <option value="2026-2027">2026-2027</option>
+                    <option value="2025-2026">2025-2026</option>
+                </select>
+                <!-- Check Icon SVG -->
+                <svg class="input-icon" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </div>
+
+            <!-- Username Field -->
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" required>
+                <!-- User Icon SVG -->
+                <svg class="input-icon" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required>
+                <!-- Key/Lock Icon SVG -->
+                <svg class="input-icon" viewBox="0 0 24 24">
+                    <path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v2h2v-2h2v-2H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                </svg>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">LOGIN</button>
+
+            <!-- Forgot Password -->
+            <div class="forgot-link">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+
+        <!-- Inner Links -->
+        <div class="card-links">
+            <a href="#">Employee Check In</a> | 
+            <a href="#">Student Pickup</a> | 
+            <a href="#">Student Information</a>
+        </div>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <p>&copy; 2018 BELTEI Login Form. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
